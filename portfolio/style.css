@@ -1,0 +1,363 @@
+/* Fichier: style.css */
+
+/* Styles généraux et typographie */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #343a40; /* Gris foncé pour le texte principal */
+    line-height: 1.7;
+    background-color: #f8f9fa; /* Fond très légèrement grisé */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Couleur des titres (un gris anthracite plus intense) */
+}
+
+/* Navbar personnalisée */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: #2c3e50 !important; /* Couleur plus profonde pour la navbar */
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+.nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    color: rgba(255, 255, 255, 0.7) !important; /* Couleur des liens navbar */
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #007bff !important; /* Bleu primaire de Bootstrap au survol/actif */
+}
+
+/* Hero Section */
+.hero-section {
+    /* Utilise un dégradé superposé à une image aléatoire pour un fond dynamique */
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('https://source.unsplash.com/random/1920x1080/?data,analytics') no-repeat center center/cover;
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+    padding-top: 56px; /* Pour compenser la navbar fixe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 4.5rem; /* Titre plus grand */
+    font-weight: 700 !important;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    color: #ffffff;
+}
+
+.hero-section .lead {
+    font-size: 2rem; /* Sous-titre plus grand */
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-intro {
+    font-size: 1.25rem; /* Texte d'introduction plus grand */
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Style pour le lien de certification dans la section Hero */
+.hero-certification-link {
+    font-weight: 600; /* Le rend plus visible */
+    transition: color 0.3s ease;
+    text-decoration: underline !important; /* Force le soulignement */
+}
+
+.hero-certification-link:hover {
+    color: #f7e090 !important; /* Une couleur qui attire l'attention au survol */
+}
+
+
+.custom-btn {
+    background-color: #28a745; /* Bouton vert vif */
+    border-color: #28a745;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px; /* Bouton pill */
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+    border-color: #218838;
+    transform: translateY(-3px); /* Effet de soulèvement */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Titres de section personnalisés */
+.custom-heading {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 50px !important; /* Plus d'espace sous le titre */
+    display: inline-block; /* Permet au pseudo-élément de s'adapter */
+    color: #2c3e50; /* Couleur sombre */
+}
+
+.custom-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px; /* Largeur de la ligne */
+    height: 4px; /* Épaisseur de la ligne */
+    background-color: #007bff; /* Couleur de la ligne (bleu primaire) */
+    border-radius: 2px;
+}
+
+.custom-subheading {
+    color: #007bff; /* Sous-titres en bleu primaire */
+    margin-top: 40px;
+    margin-bottom: 30px !important;
+}
+
+/* À Mon Sujet Section */
+#about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.skill-badge {
+    background-color: #e0f2f7 !important; /* Bleu très clair */
+    color: #007bff !important; /* Texte bleu primaire */
+    padding: 10px 20px;
+    border-radius: 50px; /* Forme de pilule */
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid #b3e5fc;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Indique que le badge est cliquable */
+}
+
+.skill-badge:hover {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Style pour le badge de certification */
+.custom-certification-badge {
+    background-color: #f7e090 !important; /* Jaune doux pour la certification */
+    color: #a07a00 !important; /* Texte sombre pour le contraste */
+    border: 1px solid #e0c240;
+    font-weight: 700; /* Plus gras */
+    padding: 12px 25px; /* Plus de padding pour le faire ressortir */
+    cursor: pointer; /* Indique que le badge est cliquable */
+}
+
+.custom-certification-badge:hover {
+    background-color: #e0c240 !important; /* Jaune plus foncé au survol */
+    color: #ffffff !important; /* Texte blanc au survol */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.education-item {
+    border-left: 5px solid #007bff; /* Bordure bleue sur le côté */
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.education-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* Expériences Professionnelles Section (Cartes) */
+#experiences {
+    background-color: #f1f3f5; /* Fond légèrement différent pour cette section */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.experience-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px); /* Soulève plus la carte au survol */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important; /* Ombre plus intense */
+}
+
+.experience-card .card-img-top {
+    width: 100px; /* Taille fixe pour le cercle */
+    height: 100px; /* Taille fixe pour le cercle */
+    border-radius: 50%; /* Rend l'élément parfaitement circulaire */
+    object-fit: cover; /* Recadre l'image pour couvrir le cercle sans déformation */
+    display: block; /* S'assure que margin-left/right: auto fonctionne pour le centrage */
+    margin: 20px auto 20px auto; /* Centre l'image et ajoute de la marge */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 3px solid #007bff; /* Bordure autour du logo */
+}
+
+.experience-card .card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.experience-card ul {
+    list-style: none; /* Enlève les puces par défaut */
+    padding-left: 0;
+}
+
+.experience-card ul li {
+    position: relative;
+    padding-left: 25px; /* Espace pour l'icône */
+    margin-bottom: 8px;
+}
+
+.experience-card ul li i {
+    position: absolute;
+    left: 0;
+    top: 5px; /* Ajuste la position de l'icône */
+    font-size: 1rem;
+}
+
+/* Section Contact */
+#contact {
+    background-color: #2c3e50 !important; /* Fond sombre pour le contact */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#contact .custom-heading {
+    color: #ffffff !important; /* Titre blanc sur fond sombre */
+}
+
+#contact .custom-heading::after {
+    background-color: #007bff; /* Ligne bleue sous le titre blanc */
+}
+
+.contact-info li a {
+    color: #ffffff !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-info li a:hover {
+    color: #007bff !important; /* Texte bleu au survol */
+    text-decoration: none; /* Enlève le soulignement par défaut */
+}
+
+.contact-info i {
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #212529 !important; /* Un noir légèrement plus doux */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Styles pour la modale de certification (sans rotation) */
+.modal-body {
+    background-color: #f8f9fa; /* Fond clair pour le corps de la modale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important; /* Supprime le padding par défaut de Bootstrap */
+    overflow: hidden; /* Cache ce qui dépasse */
+}
+
+.certification-pdf-iframe {
+    width: 100%; /* L'iframe prend 100% de la largeur de son conteneur */
+    height: 80vh; /* Une hauteur définie pour être bien visible */
+    border: none; /* Pas de bordure pour l'iframe */
+    /* Suppression des transformations de rotation et de positionnement absolu */
+    transform: none; /* S'assure qu'aucune transformation n'est appliquée */
+    position: relative; /* Repositionnement par défaut */
+    top: auto;
+    left: auto;
+}
+
+/* Ajustements responsives généraux (la modale PDF n'a plus besoin d'ajustements spécifiques pour la rotation) */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+    .hero-section .lead {
+        font-size: 1.5rem;
+    }
+    .hero-intro {
+        font-size: 1.1rem;
+    }
+    .custom-heading {
+        font-size: 2.5rem;
+    }
+    /* La modale PDF s'adapte déjà grâce aux règles ci-dessus, mais on peut ajuster sa taille max */
+    .modal-dialog.modal-xl {
+        max-width: 95%; /* Modale plus petite sur mobile */
+    }
+    .certification-pdf-iframe {
+        height: 70vh; /* Ajustement de la hauteur pour les tablettes */
+    }
+}
+
+@media (max-width: 768px) { /* Pour les mobiles */
+    .hero-section {
+        min-height: 80vh;
+    }
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    .hero-section .lead {
+        font-size: 1.3rem;
+    }
+    .hero-intro {
+        font-size: 1rem;
+    }
+    .custom-heading {
+        font-size: 2rem;
+        margin-bottom: 30px !important;
+    }
+    .custom-heading::after {
+        width: 60px;
+        height: 3px;
+    }
+    .skill-badge {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+    .education-item {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    .certification-pdf-iframe {
+        height: 60vh; /* Ajustement de la hauteur pour les mobiles */
+    }
+}
