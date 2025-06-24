@@ -5,24 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Claude-Emmanuel Ahobaut | Data Analyst</title>
     
-    <!-- Google Fonts pour une typographie moderne et épurée -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Bootstrap CSS via CDN - Indispensable pour les styles de base -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
-    <!-- Icônes Bootstrap - Pour les petites icônes dans les listes et les liens -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
-    <!-- Ton fichier CSS personnalisé (style.css) - Doit être chargé APRÈS Bootstrap pour que tes styles prévalent -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
 
-    <!-- Navbar - Barre de navigation fixe en haut -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#hero">Claude-Emmanuel Ahobaut</a>
+            <a class="navbar-brand fw-bold" href="#hero">CEA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,9 +32,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#experiences">Expériences</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#works">Projets</a> <!-- Nouveau lien dans la nav -->
-                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#works">Mes Travaux</a> </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
@@ -48,30 +42,27 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Section d'accueil avec une grande introduction -->
-    <section id="hero" class="hero-section d-flex align-items-center justify-content-center text-white text-center">
+    <section id="hero" class="hero-section d-flex align-items-center justify-content-center text-white text-center fade-in-on-scroll">
         <div class="container">
-            <h1 class="display-3 fw-bold mb-3">Bonjour, je suis Claude-Emmanuel Ahobaut</h1>
+            <h1 class="display-3 fw-bold mb-3">Transformer la Donnée en Décision</h1>
             <p class="lead mb-4">
-                Data Analyst | Expert Power BI, SQL & Python
+                Data Analyst spécialisé dans la création d'insights clairs et actionnables via Power BI, SQL & Python.
             </p>
             <p class="hero-intro">
-                Passionné par la transformation des données brutes en **insights stratégiques** et actionnables, je crée des rapports interactifs percutants pour optimiser la prise de décision. **Certifié Microsoft Power BI Data Analyst Associate !**
-                <!-- Lien déclencheur de la modale pour la certification -->
+                Certifié Microsoft Power BI Data Analyst Associate !
                 <a href="#" class="text-white-50 ms-2 hero-certification-link" data-bs-toggle="modal" data-bs-target="#certificationModal" style="text-decoration: underline;">(Voir la certification)</a>
             </p>
-            <a href="#experiences" class="btn btn-primary btn-lg mt-3 custom-btn">Découvrir mes expériences</a>
+            <a href="#works" class="btn btn-primary btn-lg mt-3 custom-btn">Voir mes travaux</a>
         </div>
     </section>
 
-    <!-- À Mon Sujet Section - Présentation détaillée des compétences et du parcours -->
-    <section id="about" class="py-5 bg-light">
+    <section id="about" class="py-5 bg-light fade-in-on-scroll">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="display-5 fw-bold mb-4 custom-heading">À Mon Sujet</h2>
                     <p class="lead mb-4">
-                        Avec 4 années d'expérience dédiées à la Data, je suis un **Data Analyst** passionné par la transformation des données brutes en <span class="text-primary fw-bold">insights stratégiques</span> et actionnables. Mon expertise s'articule autour de la <span class="fw-bold">visualisation de données</span> et la création de rapports interactifs percutants avec <span class="fw-bold">Power BI</span>, complétée par une solide maîtrise de <span class="fw-bold">SQL et Python</span> pour la manipulation et la modélisation de jeux de données complexes.
+                        Avec 4 années d'expérience dédiées à la Data, je suis un <span class="fw-bold">Data Analyst</span> passionné par la transformation des données brutes en <span class="text-primary fw-bold">insights stratégiques</span> et actionnables. Mon expertise s'articule autour de la <span class="fw-bold">visualisation de données</span> et la création de rapports interactifs percutants avec <span class="fw-bold">Power BI</span>, complétée par une solide maîtrise de <span class="fw-bold">SQL et Python</span> pour la manipulation et la modélisation de jeux de données complexes.
                     </p>
                     <p class="mb-5">
                         Mon objectif est d'optimiser la prise de décision en entreprise, en apportant une perspective analytique rigoureuse et une capacité à collaborer étroitement avec les équipes métier. Je suis constamment à l'affût de nouveaux défis, curieux d'explorer des secteurs innovants, comme celui de la banque, pour y apporter ma contribution.
@@ -83,17 +74,17 @@
                 <div class="col-md-6 mb-4">
                     <h3 class="h4 fw-bold mb-3 text-center custom-subheading">Mes Compétences Clés</h3>
                     <div class="d-flex flex-wrap justify-content-center">
-                        <span class="badge text-bg-primary m-2 skill-badge">Python</span>
-                        <span class="badge text-bg-primary m-2 skill-badge">SQL</span>
-                        <span class="badge text-bg-primary m-2 skill-badge">Power BI</span>
-                        <span class="badge text-bg-primary m-2 skill-badge">Databricks</span>
-                        <span class="badge text-bg-primary m-2 skill-badge">Visualisation de Données</span>
-                        <span class="badge text-bg-primary m-2 skill-badge">Statistiques Descriptives</span>
-                        <span class="badge text-bg-primary m-2 skill-badge">Analyse Métier</span>
-                        <span class="badge text-bg-primary m-2 skill-badge">Modélisation de Données</span>
-                        <!-- Badge cliquable pour la certification -->
-                        <a href="#" class="badge m-2 skill-badge custom-certification-badge" data-bs-toggle="modal" data-bs-target="#certificationModal">
-                            Certifié Microsoft Power BI Data Analyst Associate <i class="bi bi-box-arrow-up-right ms-1"></i>
+                        <span class="badge m-2 skill-badge">Python</span>
+                        <span class="badge m-2 skill-badge">SQL</span>
+                        <span class="badge m-2 skill-badge">Power BI</span>
+                        <span class="badge m-2 skill-badge">Databricks</span>
+                        <span class="badge m-2 skill-badge">Visualisation de Données</span>
+                        <span class="badge m-2 skill-badge">Statistiques Descriptives</span>
+                        <span class="badge m-2 skill-badge">Analyse Métier</span>
+                        <span class="badge m-2 skill-badge">Modélisation de Données</span>
+                        <span class="badge m-2 skill-badge">Prompting</span>
+                        <a href="https://learn.microsoft.com/fr-fr/users/claudeemmanuelahobaut-7607/credentials/certification/data-analyst-associate?tab=credentials-tab" target="_blank" class="badge m-2 custom-certification-badge-powerbi" >
+                            <i class="bi bi-microsoft me-2"></i> Certifié Microsoft Power BI Data Analyst Associate <i class="bi bi-box-arrow-up-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -122,95 +113,84 @@
         </div>
     </section>
 
-    <!-- Expériences Professionnelles Section - Détails des expériences avec résultats clés -->
-    <section id="experiences" class="py-5">
+    <section id="experiences" class="py-5 fade-in-on-scroll">
         <div class="container">
             <h2 class="display-5 fw-bold text-center mb-5 custom-heading">Mes Expériences Professionnelles</h2>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <!-- Expérience 1: VOLVO -->
                 <div class="col">
-                    <div class="card h-100 shadow-sm experience-card">
-                        <div class="card-body d-flex flex-column">
-                            <img src="volvo.jpg" class="card-img-top mx-auto mb-3 rounded-circle border border-primary border-3" alt="Logo Volvo">
-                            <h3 class="card-title text-center text-primary mb-3">Data Analyst chez VOLVO</h3>
-                            <p class="card-subtitle text-muted text-center mb-3">2023-2025</p>
-                            <ul class="list-unstyled flex-grow-1">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mise en place d'un rapport suivant la qualité du service de garantie des partenaires sous forme de KPI.</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Collaboration avec les Keys users pour la validation/correction de règles de gestion.</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Gestion des accès aux données sécurisée et de la traduction pour un déploiement à de nouveaux marchés.</li>
-                                <li class="fw-bold mt-3"><i class="bi bi-award-fill text-warning me-2"></i>Résultat clé : Amélioration de 20% de la qualité du ciblage des audits auprès des partenaires.</li>
-                            </ul>
-                            <!-- Ajoute un lien "En savoir plus" si tu as un projet ou une étude de cas détaillée pour cette expérience -->
-                            <!-- <a href="#" class="btn btn-outline-primary btn-sm mt-auto d-block">En savoir plus</a> -->
+                    <a href="experience-volvo-data-analyst.html" class="card-link">
+                        <div class="card h-100 shadow-sm experience-card">
+                            <div class="card-body d-flex flex-column">
+                                <img src="volvo.jpg" class="card-img-top mx-auto mb-3" alt="Logo Volvo" loading="lazy">
+                                <h3 class="card-title text-center mb-3">Data Analyst chez VOLVO</h3>
+                                <p class="card-subtitle text-muted text-center mb-3">2023-2025</p>
+                                <p class="card-text">
+                                    Collaborateur du cycle de vie des rapports Power BI, depuis la collecte des besoins métier jusqu'à la conception des tableaux de bord et au monitoring du bon déroulement des flux rafraichissement de données. Modélisation de modèles de données. Participation au groupe de partage de connaissance Power BI.
+                                </p>
+                                <small class="text-muted text-center mt-auto d-block fw-bold">Voir les détails <i class="bi bi-arrow-right-short"></i></small>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Expérience 2: Consultant Data Analyst chez KEYRUS -->
                 <div class="col">
-                    <div class="card h-100 shadow-sm experience-card">
-                        <div class="card-body d-flex flex-column">
-                            <img src="keyrus.png" class="card-img-top mx-auto mb-3 rounded-circle border border-success border-3" alt="Logo Keyrus">
-                            <h3 class="card-title text-center text-success mb-3">Consultant Data Analyst chez KEYRUS</h3>
-                            <p class="card-subtitle text-muted text-center mb-3">2021-2023</p>
-                            <ul class="list-unstyled flex-grow-1">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mission: Maintenance & évolution de rapports Power BI chez Volvo.</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Recueil des besoins fonctionnels et migration de modèle de données.</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Modélisation décisionnelle, mise en place de rapports et analyse de données.</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Maintenance et résolution d'incidents techniques.</li>
-                            </ul>
-                            <!-- <a href="#" class="btn btn-outline-success btn-sm mt-auto d-block">En savoir plus</a> -->
+                    <a href="experience-keyrus.html" class="card-link">
+                        <div class="card h-100 shadow-sm experience-card">
+                            <div class="card-body d-flex flex-column">
+                                <img src="keyrus.png" class="card-img-top mx-auto mb-3" alt="Logo Keyrus" loading="lazy">
+                                <h3 class="card-title text-center mb-3">Consultant Data Analyst chez KEYRUS</h3>
+                                <p class="card-subtitle text-muted text-center mb-3">2021-2023</p>
+                                <p class="card-text">
+                                    Mission principale : Maintenance & évolution de rapports Power BI chez Volvo. Recueil des besoins fonctionnels et modélisation décisionnelle.
+                                </p>
+                                <small class="text-muted text-center mt-auto d-block fw-bold">Voir les détails <i class="bi bi-arrow-right-short"></i></small>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Expérience 3: VOLVO -->
                 <div class="col">
-                    <div class="card h-100 shadow-sm experience-card">
-                        <div class="card-body d-flex flex-column">
-                            <img src="volvo.jpg" class="card-img-top mx-auto mb-3 rounded-circle border border-warning border-3" alt="Logo Volvo">
-                            <h3 class="card-title text-center text-warning mb-3">Assistant en gestion des données et outils d'achats chez VOLVO</h3>
-                            <p class="card-subtitle text-muted text-center mb-3">2019-2021</p>
-                            <ul class="list-unstyled flex-grow-1">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Conception d'applications de gestion de fournisseurs avec Power Apps & Power Automate.</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Automatisation de traitements Excel avec Power BI.</li>
-                                <li class="fw-bold mt-3"><i class="bi bi-award-fill text-warning me-2"></i>Résultat clé : Gain d'une journée de travail pour le contrôleur de gestion.</li>
-                            </ul>
-                            <!-- <a href="#" class="btn btn-outline-warning btn-sm mt-auto d-block">En savoir plus</a> -->
+                    <a href="experience-volvo-alternance.html" class="card-link">
+                        <div class="card h-100 shadow-sm experience-card">
+                            <div class="card-body d-flex flex-column">
+                                <img src="volvo.jpg" class="card-img-top mx-auto mb-3" alt="Logo Volvo Alternance" loading="lazy">
+                                <h3 class="card-title text-center mb-3">Assistant gestion données & outils achats (Alternance)</h3>
+                                <p class="card-subtitle text-muted text-center mb-3">2019-2021</p>
+                                <p class="card-text">
+                                    Conception d'applications de gestion de fournisseurs avec Power Apps & Power Automate. Automatisation de traitements avec Power BI. Gain d'une journée de travail pour le contrôleur de gestion.
+                                </p>
+                                <small class="text-muted text-center mt-auto d-block fw-bold">Voir les détails <i class="bi bi-arrow-right-short"></i></small>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Nouvelle Section: Mes Projets & Travaux -->
-    <section id="works" class="py-5 bg-light">
+    <section id="works" class="py-5 bg-light fade-in-on-scroll">
         <div class="container">
             <h2 class="display-5 fw-bold text-center mb-5 custom-heading">Mes Projets & Travaux</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
-                <!-- Projet 1: Dashboard d'Analyse des Événements Solaires -->
                 <div class="col">
                     <div class="card h-100 shadow-sm work-card">
                         <div class="card-body d-flex flex-column">
-                            <h3 class="card-title text-primary mb-3">Dashboard d'Analyse des Événements Solaires</h3>
+                            <h3 class="card-title mb-3">Dashboard d'Analyse des Événements Solaires</h3>
                             <p class="card-text flex-grow-1">
-                                Ce projet est un tableau de bord interactif conçu pour analyser l'impact des événements solaires sur les réseaux électriques. Il intègre des KPIs, des visualisations dynamiques (graphiques de distribution, boîtes à moustaches, heatmap de corrélation avec Plotly.js), une exploration de données filtrable et une fonctionnalité d'analyse d'événements par IA (Gemini API). L'objectif est de fournir des insights clairs et des recommandations pour renforcer la résilience du réseau.
+                                Ce projet est un tableau de bord interactif conçu pour analyser l'impact des événements solaires sur les réseaux électriques. Il intègre des KPIs, des visualisations dynamiques (graphiques de distribution, boîtes à moustaches, heatmap de corrélation avec Plotly.js)		 et une exploration de données filtrable. La conception de ce rapport est faite dans un but éducatif, avec Gemini 2.5 afin de tester mes compétences en écriture de prompt. Les données proviennent d'une source Kaggle. L'objectif est de fournir des insights clairs et des recommandations pour renforcer la résilience du réseau.
                             </p>
-                            <!-- IMPORTANT: Le data-immersive-id doit correspondre à l'ID de l'immersive que je vais générer juste après -->
-                            <a href="eda++Solare.html" data-immersive-id="solar-events-dashboard" class="btn btn-outline-primary mt-auto d-block project-link">Voir le Dashboard</a>
+                            <a href="eda++Solare.html" data-immersive-id="solar-events-dashboard" class="btn btn-outline-primary mt-auto d-block project-link">Voir le projet</a>
                         </div>
                     </div>
                 </div>
-                <!-- Tu peux ajouter d'autres projets ici en copiant/collant le bloc 'col' -->
                 <div class="col">
                     <div class="card h-100 shadow-sm work-card">
                         <div class="card-body d-flex flex-column">
-                            <h3 class="card-title text-primary mb-3">Projet Futur ou Autre Travail</h3>
+                            <h3 class="card-title mb-3">Projet Futur ou Autre Travail</h3>
                             <p class="card-text flex-grow-1">
                                 Description de ton second projet. Détaille ce que tu as fait, les technologies utilisées et les résultats. Par exemple : "Développement d'un outil d'automatisation de rapports financiers avec Python et Power BI, réduisant le temps de traitement de 30%."
                             </p>
-                            <a href="#" class="btn btn-outline-primary mt-auto d-block project-link">En savoir plus</a>
+                            <a href="#" class="btn btn-outline-primary mt-auto d-block project-link">Voir le projet</a>
                         </div>
                     </div>
                 </div>
@@ -218,10 +198,9 @@
         </div>
     </section>
 
-    <!-- Contact Section - Informations de contact et liens sociaux -->
-    <section id="contact" class="bg-dark text-white py-5">
+    <section id="contact" class="text-white py-5 fade-in-on-scroll">
         <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-4 custom-heading text-white">Me Contacter</h2>
+            <h2 class="display-5 fw-bold mb-4 custom-heading">Me Contacter</h2>
             <p class="lead mb-4">
                 N'hésitez pas à me contacter pour discuter de vos besoins en analyse de données ou de potentielles collaborations !
             </p>
@@ -229,41 +208,29 @@
                 <div class="col-md-8">
                     <ul class="list-unstyled contact-info">
                         <li class="mb-3">
-                            <i class="bi bi-envelope-fill text-primary me-2"></i>
-                            Email : <a href="mailto:cahobaut@icloud.com" class="text-white-50">cahobaut@icloud.com</a>
-                        </li>
-                        <!-- Numéro de téléphone masqué -->
-                        <!-- <li class="mb-3">
-                            <i class="bi bi-phone-fill text-primary me-2"></i>
-                            Téléphone : <a href="tel:+33663631837" class="text-white-50">+336 63 63 18 37</a>
-                        </li> -->
-                        <li class="mb-3">
-                            <i class="bi bi-linkedin text-primary me-2"></i>
-                            LinkedIn : <a href="https://www.linkedin.com/in/claude-emmanuel-ahobaut" target="_blank" class="text-white-50">Claude-Emmanuel Ahobaut</a>
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            Email : <a href="mailto:cahobaut@icloud.com" class="text-white">cahobaut@icloud.com</a>
                         </li>
                         <li class="mb-3">
-                            <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                            <i class="bi bi-linkedin me-2"></i>
+                            LinkedIn : <a href="https://www.linkedin.com/in/claude-emmanuel-ahobaut" target="_blank" class="text-white">Claude-Emmanuel Ahobaut</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-geo-alt-fill me-2"></i>
                             Localisation : Lyon, France
                         </li>
-                        <!-- N'oublie pas d'ajouter ton GitHub ici si tu en as un ! -->
-                        <!-- <li class="mb-3">
-                            <i class="bi bi-github text-primary me-2"></i>
-                            GitHub : <a href="#" target="_blank" class="text-white-50">Ton Profil GitHub</a>
-                        </li> -->
-                    </ul>
+                        </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer - Pied de page avec copyright -->
     <footer class="bg-dark text-center text-white-50 py-3">
         <div class="container">
-            <p class="mb-0">&copy; 2024 Claude-Emmanuel Ahobaut. Tous droits réservés.</p>
+            <p class="mb-0">© 2024 Claude-Emmanuel Ahobaut. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <!-- Modal pour la certification - Fenêtre pop-up affichant le PDF -->
     <div class="modal fade" id="certificationModal" tabindex="-1" aria-labelledby="certificationModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
@@ -272,14 +239,39 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex justify-content-center align-items-center p-0">
-                    <!-- Chemin du PDF : Assure-toi que "CertifPwBI.pdf" est EXACTEMENT le nom de ton fichier PDF et qu'il est dans le même dossier ! -->
                     <iframe src="CertifPwBI.pdf" class="certification-pdf-iframe" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
-    </div
-    <!-- Bootstrap JS Bundle (avec Popper.js inclus) - DOIT ÊTRE À LA FIN DU BODY pour que les composants JS fonctionnent -->
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // JavaScript pour les animations d'apparition au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const faders = document.querySelectorAll('.fade-in-on-scroll');
+
+            const appearOptions = {
+                threshold: 0.2, // Quand 20% de l'élément est visible
+                rootMargin: "0px 0px -50px 0px" // Aide à déclencher un peu avant/après
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('is-visible');
+                        appearOnScroll.unobserve(entry.target); // Arrête d'observer une fois l'animation jouée
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
 
 </body>
 </html>
