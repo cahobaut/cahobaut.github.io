@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine & Claude-Emmanuel - Notre Mariage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            line-height: 1.6;
+            color: #4a4a4a;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
+                        url('images/tropicalakan.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            background-attachment: fixed;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 1.5s ease-out;
+        }
+        
+        .couple-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 10.5rem;
+            color: #d4af8c;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .ampersand {
+            font-size: 3rem;
+            color: #e8c5a0;
+            margin: 0 1rem;
+            display: inline-block;
+            animation: pulse 3s infinite;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #8b7355;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+        
+        .heart {
+            font-size: 2rem;
+            color: #e8c5a0;
+            margin: 2rem 0;
+            animation: heartbeat 2s infinite;
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            text-align: center;
+            color: #d4af8c;
+            margin-bottom: 3rem;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .detail-card {
+            background: rgba(255,255,255,0.9);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(212,175,140,0.2);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .detail-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af8c, #e8c5a0, #d4af8c);
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .detail-icon {
+            font-size: 2.5rem;
+            color: #d4af8c;
+            margin-bottom: 1rem;
+        }
+        
+        .detail-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #8b7355;
+            margin-bottom: 1rem;
+        }
+        
+        .detail-info {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* RSVP Section */
+        .rsvp-section {
+            background: linear-gradient(135deg, #fff 0%, #f8f4f0 100%);
+            padding: 5rem 0;
+        }
+        
+        .rsvp-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #8b7355;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #f0f0f0;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af8c;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #d4af8c 0%, #e8c5a0 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212,175,140,0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #8b7355;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .footer-heart {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.05); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .couple-names {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .detail-card {
+                padding: 2rem;
+            }
+            
+            .rsvp-form {
+                padding: 2rem;
+                margin: 0 1rem;
+            }
+        }
+        
+        /* Radio and checkbox styling */
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .radio-label,
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: normal;
+            margin-bottom: 0 !important;
+        }
+        
+        .radio-label input[type="radio"],
+        .checkbox-label input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.8rem;
+            transform: scale(1.2);
+        }
+        
+        .radio-label span,
+        .checkbox-label span {
+            color: #666;
+        }
+        .color-palette {
+            text-align: center;
+        }
+        
+        .color-circles {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .color-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .color-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            color: rgba(212,175,140,0.1);
+            font-size: 1.5rem;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+                            <h1 class="couple-names">
+                Claude-Emmanuel <span class="ampersand">&</span> Marine
+            </h1>
+            <p class="tagline">C'était écrit</p>
+            <div class="heart">♥</div>
+            <p style="font-size: 1.2rem; color: #8b7355;">Nous avons l'honneur de vous inviter à célébrer notre mariage traditionnel</p>
+        </div>
+    </section>
+    
+    <!-- Details Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Détails de la Célébration</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">📅</div>
+                    <h3 class="detail-title">Date</h3>
+                    <p class="detail-info">21 Décembre 2025<br></p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="detail-icon">📍</div>
+                    <h3 class="detail-title">Lieu</h3>
+                    <p class="detail-info">Abobo Baoulé<br><em>Un cadre magnifique pour notre jour J</em></p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="detail-icon">🎨</div>
+                    <h3 class="detail-title">Couleurs du Mariage</h3>
+                    <div class="color-palette">
+                        <div class="color-circles">
+                            <div class="color-circle" style="background-color: #C2185B;" title="Rose vif"></div>
+                            <div class="color-circle" style="background-color: #FF5722;" title="Orange"></div>
+                            <div class="color-circle" style="background-color: #880E4F;" title="Bordeaux"></div>
+                            <div class="color-circle" style="background-color: #558B2F;" title="Vert olive"></div>
+                            <div class="color-circle" style="background-color: #F48FB1;" title="Rose clair"></div>
+                        </div>
+                        <p class="detail-info" style="margin-top: 1rem;">Palette de couleurs du mariage<br><em>Inspirez-vous de ces couleurs</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- RSVP Section -->
+    <section class="rsvp-section">
+        <div class="container">
+            <h2 class="section-title">Confirmez votre Présence</h2>
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-group">
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Numéro de téléphone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label>Votre présence :</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="presence" value="oui_seul" required>
+                            <span>Oui, je serai là</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="presence" value="non" required>
+                            <span>Non, je ne pourrai pas y assister</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="presence" value="oui_accompagne" required>
+                            <span>Oui, je viendrai accompagné(e)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Options de menu (choisissez celles qui s'appliquent) :</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="menu_options" value="vegetarien">
+                            <span>Végétarien</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="menu_options" value="halal">
+                            <span>Halal</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="menu_options" value="casher">
+                            <span>Casher</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="menu_options" value="sans_gluten">
+                            <span>Sans gluten</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="menu_options" value="aucune">
+                            <span>Aucune restriction</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="menu_options" value="autre" id="autreCheckbox">
+                            <span>Autre</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="autreRestriction" style="display: none;">
+                    <label for="autre_restriction">Autre restriction en particulier ?</label>
+                    <textarea id="autre_restriction" name="autre_restriction" rows="3" placeholder="Précisez votre restriction alimentaire..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Envoyer la confirmation</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Avec tout notre amour</p>
+            <div class="footer-heart">♥</div>
+            <p><em>Claude-Emmanuel & Marine</em></p>
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                Si vous devez modifier votre réservation, veuillez soumettre à nouveau le formulaire.<br>
+                Nous prendrons en compte votre dernière soumission.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Create floating hearts animation
+        function createFloatingHeart() {
+            const heartsContainer = document.getElementById('floatingHearts');
+            const heart = document.createElement('div');
+            heart.className = 'floating-heart';
+            heart.innerHTML = ['♥', '♡', '💕', '💖'][Math.floor(Math.random() * 4)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 15 + 's';
+            heart.style.fontSize = (Math.random() * 1.5 + 0.8) + 'rem';
+            heartsContainer.appendChild(heart);
+            
+            // Remove heart after animation
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.parentNode.removeChild(heart);
+                }
+            }, 15000);
+        }
+        
+        // Create hearts periodically
+        setInterval(createFloatingHeart, 3000);
+        
+        // Form submission
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const prenom = document.getElementById('prenom').value;
+            const nom = document.getElementById('nom').value;
+            const presence = document.querySelector('input[name="presence"]:checked');
+            
+            if (!prenom || !nom || !presence) {
+                alert('Veuillez remplir les champs obligatoires.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Envoi en cours...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Merci ! Votre réponse a été enregistrée avec succès. ♥');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                this.reset();
+                // Hide the "autre restriction" field when form is reset
+                document.getElementById('autreRestriction').style.display = 'none';
+            }, 2000);
+        });
+        
+        // Show/hide "autre restriction" field
+        document.getElementById('autreCheckbox').addEventListener('change', function() {
+            const autreRestrictionDiv = document.getElementById('autreRestriction');
+            if (this.checked) {
+                autreRestrictionDiv.style.display = 'block';
+            } else {
+                autreRestrictionDiv.style.display = 'none';
+                document.getElementById('autre_restriction').value = '';
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all detail cards
+        document.querySelectorAll('.detail-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
