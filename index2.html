@@ -3,16 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude-Emmanuel & Marine - Notre Mariage</title>
+    <title>Marine & Claude-Emmanuel - Notre Mariage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        /* Styles personnalisés */
         body {
             font-family: 'Crimson Text', serif;
             line-height: 1.6;
@@ -27,13 +21,14 @@
             padding: 0 20px;
         }
         
-        /* Hero Section */
+        /* Section Héro */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            /* Revert to original image URL */
             background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
                         url('images/tropicalakan.png');
             background-size: cover;
@@ -77,7 +72,7 @@
             animation: heartbeat 2s infinite;
         }
         
-        /* Section Styling */
+        /* Style des sections */
         .section {
             padding: 5rem 0;
             position: relative;
@@ -144,7 +139,7 @@
             line-height: 1.8;
         }
         
-        /* RSVP Section */
+        /* Section RSVP */
         .rsvp-section {
             background: linear-gradient(135deg, #fff 0%, #f8f4f0 100%);
             padding: 5rem 0;
@@ -207,7 +202,7 @@
             box-shadow: 0 10px 25px rgba(212,175,140,0.3);
         }
         
-        /* Footer */
+        /* Pied de page */
         .footer {
             background: #8b7355;
             color: white;
@@ -245,7 +240,7 @@
             75% { transform: scale(1.05); }
         }
         
-        /* Responsive Design */
+        /* Design réactif */
         @media (max-width: 768px) {
             .couple-names {
                 font-size: 3rem;
@@ -270,7 +265,7 @@
             }
         }
         
-        /* Radio and checkbox styling */
+        /* Style des radios et checkboxes */
         .radio-group,
         .checkbox-group {
             display: flex;
@@ -358,32 +353,110 @@
                 opacity: 0;
             }
         }
+
+        /* Styles de la modale */
+        .modal {
+            display: none; /* Caché par défaut */
+            position: fixed; /* Reste en place */
+            z-index: 1000; /* Au-dessus de tout */
+            left: 0;
+            top: 0;
+            width: 100%; /* Pleine largeur */
+            height: 100%; /* Pleine hauteur */
+            overflow: auto; /* Active le défilement si nécessaire */
+            background-color: rgba(0,0,0,0.4); /* Noir avec opacité */
+            justify-content: center; /* Centrage horizontal */
+            align-items: center; /* Centrage vertical */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 2rem;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Styles de la page de remerciement */
+        #thankYouPage {
+            display: none; /* Caché par défaut */
+            min-height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 2rem;
+        }
+        #thankYouPage .section-title {
+            font-size: 4rem;
+            color: #d4af8c;
+            margin-bottom: 1.5rem;
+        }
+        #thankYouPage p {
+            font-size: 1.5rem;
+            color: #8b7355;
+            margin-bottom: 1rem;
+        }
+        #thankYouPage .heart {
+            font-size: 3rem;
+            color: #e8c5a0;
+            margin: 2rem 0;
+        }
+        /* Styles spécifiques pour correspondre au style initial */
+        .hero .hero-content p {
+            font-size: 1.2rem;
+            color: #8b7355;
+        }
+        .footer .last-p { /* Nouvelle classe pour le dernier paragraphe du footer */
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
     <div class="floating-hearts" id="floatingHearts"></div>
     
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="heroSection">
         <div class="hero-content">
-                            <h1 class="couple-names">
+            <h1 class="couple-names">
                 Claude-Emmanuel <span class="ampersand">&</span> Marine
             </h1>
             <p class="tagline">C'était écrit</p>
             <div class="heart">♥</div>
-            <p style="font-size: 1.2rem; color: #8b7355;">Nous avons l'honneur de vous inviter à célébrer notre mariage traditionnel</p>
+            <p class="hero-content-text">Nous avons l'honneur de vous inviter à célébrer notre mariage traditionnel</p>
         </div>
     </section>
     
-    <!-- Details Section -->
-    <section class="section">
+    <section class="section" id="detailsSection">
         <div class="container">
             <h2 class="section-title">Détails de la Célébration</h2>
             <div class="details-grid">
                 <div class="detail-card">
                     <div class="detail-icon">📅</div>
                     <h3 class="detail-title">Date</h3>
-                    <p class="detail-info">20 Décembre 2025<br></p>
+                    <p class="detail-info">21 Décembre 2025<br></p>
                 </div>
                 
                 <div class="detail-card">
@@ -410,99 +483,122 @@
         </div>
     </section>
     
-    <!-- RSVP Section -->
-    <section class="rsvp-section">
+    <section class="rsvp-section" id="rsvpSection">
         <div class="container">
             <h2 class="section-title">Confirmez votre Présence</h2>
-            <form class="rsvp-form" id="rsvpForm">
+            <form action="https://script.google.com/macros/s/AKfycbxIzqrn_gqC5rtGg2CJpOTQVPyi5tLzB5PxxTR75tjnbjwd23R8MRjgTAw8wELRyxE/exec" method="POST" class="rsvp-form" id="rsvpForm">
                 <div class="form-group">
-                    <label for="prenom">Prénom *</label>
-                    <input type="text" id="prenom" name="prenom" required>
+                    <label for="firstName">Prénom *</label>
+                    <input type="text" id="firstName" name="firstName" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="nom">Nom *</label>
-                    <input type="text" id="nom" name="nom" required>
+                    <label for="lastName">Nom *</label>
+                    <input type="text" id="lastName" name="lastName" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="phone">Numéro de téléphone</label>
-                    <input type="tel" id="phone" name="phone">
+                    <label for="phoneNumber">Numéro de téléphone *</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
                 </div>
                 
                 <div class="form-group">
                     <label>Votre présence :</label>
                     <div class="radio-group">
                         <label class="radio-label">
-                            <input type="radio" name="presence" value="oui_seul" required>
+                            <input type="radio" name="presence" value="yes" id="presenceYes" required>
                             <span>Oui, je serai là</span>
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="presence" value="non" required>
+                            <input type="radio" name="presence" value="no" id="presenceNo" required>
                             <span>Non, je ne pourrai pas y assister</span>
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="presence" value="oui_accompagne" required>
+                            <input type="radio" name="presence" value="with_guest" id="presenceWithGuest" required>
                             <span>Oui, je viendrai accompagné(e)</span>
                         </label>
                     </div>
+                </div>
+                
+                <div class="form-group" id="guestInfoGroup" style="display:none;">
+                    <label for="guestInfo">Par qui serez-vous accompagné(e)?<br>Nombre de personnes, nom(s), prénom(s) et numéro(s) de téléphone</label>
+                    <textarea id="guestInfo" name="guestInfo" rows="3"></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label>Options de menu (choisissez celles qui s'appliquent) :</label>
                     <div class="checkbox-group">
                         <label class="checkbox-label">
-                            <input type="checkbox" name="menu_options" value="vegetarien">
+                            <input type="checkbox" name="menuOption" value="vegetarien">
                             <span>Végétarien</span>
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="menu_options" value="halal">
+                            <input type="checkbox" name="menuOption" value="halal">
                             <span>Halal</span>
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="menu_options" value="casher">
+                            <input type="checkbox" name="menuOption" value="casher">
                             <span>Casher</span>
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="menu_options" value="sans_gluten">
+                            <input type="checkbox" name="menuOption" value="sans_gluten">
                             <span>Sans gluten</span>
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="menu_options" value="aucune">
+                            <input type="checkbox" name="menuOption" value="aucune">
                             <span>Aucune restriction</span>
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="menu_options" value="autre" id="autreCheckbox">
+                            <input type="checkbox" name="menuOption" value="autre" id="autreCheckbox">
                             <span>Autre</span>
                         </label>
                     </div>
                 </div>
                 
-                <div class="form-group" id="autreRestriction" style="display: none;">
-                    <label for="autre_restriction">Autre restriction en particulier ?</label>
-                    <textarea id="autre_restriction" name="autre_restriction" rows="3" placeholder="Précisez votre restriction alimentaire..."></textarea>
+                <div class="form-group" id="otherRestrictionInfo" style="display: none;">
+                    <label for="otherRestrictionInfo">Autre restriction en particulier ?</label>
+                    <textarea id="otherRestrictionInfo" name="otherRestrictionInfo" rows="3" placeholder="Précisez votre restriction alimentaire..."></textarea>
                 </div>
+                
+                <input type="hidden" id="submissionTimestamp" name="Horodatage">
                 
                 <button type="submit" class="submit-btn">Envoyer la confirmation</button>
             </form>
         </div>
     </section>
     
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>Avec tout notre amour</p>
             <div class="footer-heart">♥</div>
-            <p><em>Claude-Emmanuel & Marine</em></p>
-            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+            <p class="last-p"><em>Claude-Emmanuel & Marine</em></p>
+            <p class="last-p">
                 Si vous devez modifier votre réservation, veuillez soumettre à nouveau le formulaire.<br>
                 Nous prendrons en compte votre dernière soumission.
             </p>
         </div>
     </footer>
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <section id="thankYouPage" class="hidden">
+        <div class="container">
+            <h2 class="section-title">Merci pour votre réponse !</h2>
+            <p>Nous avons bien reçu votre confirmation de présence.</p>
+            <p>Nous sommes impatients de célébrer ce jour spécial avec vous.</p>
+            <div class="heart">♥</div>
+            <p class="thank-you-text">À très bientôt !</p>
+            <button id="backToHomeBtn" class="submit-btn">Retour à la page d'accueil</button>
+        </div>
+    </section>
+
     <script>
-        // Create floating hearts animation
+        // Fonction pour créer des cœurs flottants
         function createFloatingHeart() {
             const heartsContainer = document.getElementById('floatingHearts');
             const heart = document.createElement('div');
@@ -513,7 +609,7 @@
             heart.style.fontSize = (Math.random() * 1.5 + 0.8) + 'rem';
             heartsContainer.appendChild(heart);
             
-            // Remove heart after animation
+            // Supprimer le cœur après l'animation
             setTimeout(() => {
                 if (heart.parentNode) {
                     heart.parentNode.removeChild(heart);
@@ -521,51 +617,161 @@
             }, 15000);
         }
         
-        // Create hearts periodically
+        // Créer des cœurs périodiquement
         setInterval(createFloatingHeart, 3000);
         
-        // Form submission
+        // Obtenir les éléments de la modale et du message
+        const modal = document.getElementById('myModal');
+        const modalMessage = document.getElementById('modalMessage');
+        const closeButton = document.getElementsByClassName('close-button')[0];
+
+        // Fonction pour afficher le message dans la modale
+        function showModal(message) {
+            modalMessage.textContent = message;
+            modal.style.display = 'flex'; // Utiliser flex pour centrer le contenu
+        }
+
+        // Lorsque l'utilisateur clique sur <span> (x), fermer la modale
+        closeButton.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        // Lorsque l'utilisateur clique en dehors de la modale, la fermer
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Soumission du formulaire
         document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Empêche la soumission par défaut du formulaire
             
-            // Simple validation
-            const prenom = document.getElementById('prenom').value;
-            const nom = document.getElementById('nom').value;
+            // **Ajout pour l'horodatage :**
+            const now = new Date();
+            const timestampField = document.getElementById('submissionTimestamp');
+            // Formatage de la date pour qu'elle soit lisible (ex: "21/07/2024 14:35:00")
+            // Vous pouvez ajuster le format selon vos préférences ou le laisser au format ISO pour une meilleure interopérabilité.
+            timestampField.value = now.toLocaleString('fr-FR', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false // Pour un format 24h
+            });
+            
+            // Validation simple
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
             const presence = document.querySelector('input[name="presence"]:checked');
             
-            if (!prenom || !nom || !presence) {
-                alert('Veuillez remplir les champs obligatoires.');
+            if (!firstName || !lastName || !presence) {
+                showModal('Veuillez remplir les champs obligatoires.');
                 return;
             }
             
-            // Simulate form submission
+            // Désactiver le bouton de soumission et afficher un message de chargement
             const submitBtn = document.querySelector('.submit-btn');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = 'Envoi en cours...';
             submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                alert('Merci ! Votre réponse a été enregistrée avec succès. ♥');
+
+            // Collecter les données du formulaire pour Google Apps Script
+            const formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Ajout de no-cors pour éviter les problèmes de CORS avec Google Apps Script
+            })
+            .then(response => {
+                // Même avec no-cors, la propriété .ok ne sera pas fiable.
+                // On assume que si la requête ne génère pas d'erreur réseau, elle a réussi.
+                // Pour une vérification plus robuste, le script Apps Script devrait renvoyer une redirection.
+                showModal('Merci ! Votre réponse a été enregistrée avec succès. ♥');
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-                this.reset();
-                // Hide the "autre restriction" field when form is reset
-                document.getElementById('autreRestriction').style.display = 'none';
-            }, 2000);
+                this.reset(); // Réinitialiser le formulaire
+                
+                // Cacher le champ "guestInfoGroup" et "autre restriction" après la réinitialisation
+                document.getElementById('guestInfoGroup').style.display = 'none';
+                document.getElementById('guestInfo').removeAttribute('required'); // Rendre le champ facultatif
+                document.getElementById('guestInfo').value = ''; // Effacer le contenu
+                document.getElementById('otherRestrictionInfo').style.display = 'none';
+                document.getElementById('otherRestrictionInfo').value = ''; // Effacer le contenu
+
+                // Afficher la page de remerciement et cacher les sections principales
+                document.getElementById('heroSection').style.display = 'none';
+                document.getElementById('detailsSection').style.display = 'none';
+                document.getElementById('rsvpSection').style.display = 'none';
+                document.querySelector('.footer').style.display = 'none';
+                document.getElementById('thankYouPage').style.display = 'flex'; // S'assurer qu'elle est affichée en flex
+                
+                // Remonter en haut de la page
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            })
+            .catch(error => {
+                console.error('Erreur lors de la soumission du formulaire :', error);
+                showModal('Une erreur est survenue lors de l\'envoi de votre réponse. Veuillez réessayer.');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
         });
         
-        // Show/hide "autre restriction" field
+        // Afficher/masquer le champ "autre restriction"
         document.getElementById('autreCheckbox').addEventListener('change', function() {
-            const autreRestrictionDiv = document.getElementById('autreRestriction');
+            const autreRestrictionDiv = document.getElementById('otherRestrictionInfo');
             if (this.checked) {
                 autreRestrictionDiv.style.display = 'block';
             } else {
                 autreRestrictionDiv.style.display = 'none';
-                document.getElementById('autre_restriction').value = '';
+                document.getElementById('otherRestrictionInfo').value = '';
             }
         });
+        // Obtenir les éléments de la modale et du message const modal = document.getElementById('myModal'); const modalMessage = document.getElementById('modalMessage'); const closeButton = document.getElementsByClassName('close-button')[0]; // Fonction pour afficher le message dans la modale function showModal(message) { modalMessage.textContent = message; modal.style.display = 'flex'; // Utiliser flex pour centrer le contenu } // Lorsque l'utilisateur clique sur <span> (x), fermer la modale closeButton.onclick = function() { modal.style.display = 'none'; } // Lorsque l'utilisateur clique en dehors de la modale, la fermer window.onclick = function(event) { if (event.target == modal) { modal.style.display = 'none'; } }
+        // Logique pour le champ "guestInfoGroup" (accompagnateur)
+        const presenceRadios = document.querySelectorAll('input[name="presence"]');
+        const guestInfoGroup = document.getElementById('guestInfoGroup');
+        const guestInfoTextarea = document.getElementById('guestInfo');
+
+        presenceRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'with_guest') {
+                    guestInfoGroup.style.display = 'block';
+                    guestInfoTextarea.setAttribute('required', 'required'); // Rendre le champ obligatoire
+                } else {
+                    guestInfoGroup.style.display = 'none';
+                    guestInfoTextarea.removeAttribute('required'); // Rendre le champ facultatif
+                    guestInfoTextarea.value = ''; // Effacer le contenu
+                }
+            });
+        });
+
+        // Assurer l'état correct au chargement de la page
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialCheckedRadio = document.querySelector('input[name="presence"]:checked');
+            if (initialCheckedRadio && initialCheckedRadio.value === 'with_guest') {
+                guestInfoGroup.style.display = 'block';
+                guestInfoTextarea.setAttribute('required', 'required');
+            } else {
+                guestInfoGroup.style.display = 'none';
+                guestInfoTextarea.removeAttribute('required');
+            }
+        });
+
+        // Bouton "Retour à la page d'accueil" sur la page de remerciement
+        document.getElementById('backToHomeBtn').addEventListener('click', function() {
+            document.getElementById('heroSection').style.display = 'flex'; // Re-afficher
+            document.getElementById('detailsSection').style.display = 'block'; // Re-afficher
+            document.getElementById('rsvpSection').style.display = 'block'; // Re-afficher
+            document.querySelector('.footer').style.display = 'block'; // Re-afficher
+            document.getElementById('thankYouPage').style.display = 'none'; // Cacher
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
         
-        // Smooth scrolling for anchor links
+        // Défilement fluide pour les liens d'ancrage
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -579,7 +785,7 @@
             });
         });
         
-        // Add scroll animations
+        // Animations au défilement
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -594,7 +800,7 @@
             });
         }, observerOptions);
         
-        // Observe all detail cards
+        // Observer toutes les cartes de détails
         document.querySelectorAll('.detail-card').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
